@@ -25,7 +25,7 @@ import pages.NotesandCommunication;
 import pages.Settings;
 import utility.Screenshotstestcases;
 
-public class KSmoke extends Baseclass{
+public class SmokeTestContract extends Baseclass{
 
 
 	// Arrays of adjectives and nouns
