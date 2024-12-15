@@ -28,14 +28,23 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
 public class Wrapper {
 
 	 public static WebDriver driver; 
 	 public JavascriptExecutor js;
+		public  Playwright playwright;
+		public  Browser browser;
+		public  static Page page;
+		public static BrowserContext context;
 	 
 	 
 	 public String contractwebcustomerno;
-		public String ContractName;
+		public String ContractName="Agile Charter";
 	 public long totalTime;
 	 public static String Location;
 	 public String formattedDate;
@@ -75,6 +84,17 @@ public class Wrapper {
 	 public String EditUnitPrice="200";
 	 public static String invoicenumber1;
 	 public static String jobcosttabpage;
+	 public static String playwrightcustomer;//="https://app.commusoft.co.uk/customers/customer/10067/view_v2/property/view";
+		public static String playwrighthome;//="https://app.commusoft.co.uk/customers";
+		public static String playwrightcustomerno;//="10067";
+		public static String playwrightjobno;
+		public static String playwrightcontractcustomer;//="https://app.commusoft.co.uk/customers/customer/10082/view_v2/property/view";
+		public static String playwrightcontractcustomerno;
+		
+		
+		public String title="Mr & Mrs";
+		public String surName="Karnan Athisivam";
+		
 	public void type(String xpath, String value)
 	{
 		{

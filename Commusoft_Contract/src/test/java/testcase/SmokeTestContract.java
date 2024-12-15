@@ -16,6 +16,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import action.Baseclass;
+import io.testproject.sdk.internal.exceptions.AgentConnectException;
+import io.testproject.sdk.internal.exceptions.InvalidTokenException;
+import io.testproject.sdk.internal.exceptions.ObsoleteVersionException;
 import pages.CreateJob;
 import pages.Customer;
 import pages.Diary;
@@ -40,8 +43,9 @@ public class SmokeTestContract extends Baseclass{
 	};
 
 	@Test(priority = 1 )
-	public void Add_Customer() throws InterruptedException, IOException
+	public void Add_Customer() throws InterruptedException, IOException, InvalidTokenException, AgentConnectException, ObsoleteVersionException
 	{
+		setDriverContext("selenium");
 		Customer customer = new Customer(driver);
 		customer.Customer_create();
 		customer.Customer_title();
